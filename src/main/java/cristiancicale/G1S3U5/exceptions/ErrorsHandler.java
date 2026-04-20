@@ -1,7 +1,7 @@
 package cristiancicale.G1S3U5.exceptions;
 
-import cristiancicale.G5S2U5.payloads.ErrorsDTO;
-import cristiancicale.G5S2U5.payloads.ErrorsListDTO;
+import cristiancicale.G1S3U5.payloads.ErrorsDTO;
+import cristiancicale.G1S3U5.payloads.ErrorsListDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -22,6 +22,12 @@ public class ErrorsHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST) // 400
     public ErrorsListDTO handleValidationErrors(ValidationException ex) {
         return new ErrorsListDTO(ex.getMessage(), LocalDateTime.now(), ex.getErrors());
+    }
+
+    @ExceptionHandler(UnauthorizedException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED) // 401
+    public ErrorsDTO handleUnauthorizedEx(UnauthorizedException ex) {
+        return new ErrorsDTO(ex.getMessage(), LocalDateTime.now());
     }
 
     @ExceptionHandler(NotFoundException.class)

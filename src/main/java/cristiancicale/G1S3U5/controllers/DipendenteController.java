@@ -1,18 +1,17 @@
 package cristiancicale.G1S3U5.controllers;
 
-import cristiancicale.G5S2U5.entities.Dipendente;
-import cristiancicale.G5S2U5.exceptions.ValidationException;
-import cristiancicale.G5S2U5.payloads.DipendenteDTO;
-import cristiancicale.G5S2U5.payloads.DipendentePayload;
-import cristiancicale.G5S2U5.payloads.DipendenteRespDTO;
-import cristiancicale.G5S2U5.services.DipendenteService;
+import cristiancicale.G1S3U5.entities.Dipendente;
+import cristiancicale.G1S3U5.exceptions.ValidationException;
+import cristiancicale.G1S3U5.payloads.DipendenteDTO;
+import cristiancicale.G1S3U5.payloads.DipendentePayload;
+import cristiancicale.G1S3U5.payloads.DipendenteRespDTO;
+import cristiancicale.G1S3U5.services.DipendenteService;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.UUID;
@@ -63,15 +62,5 @@ public class DipendenteController {
     @ResponseStatus(HttpStatus.NO_CONTENT) // 204
     public void getByIdAndDelete(@PathVariable UUID dipendenteId) {
         this.dipendenteService.findByIdAndDelete(dipendenteId);
-    }
-
-    @PatchMapping("/{dipendenteId}/avatar")
-    public void uploadAvatar(@RequestParam("profile_picture") MultipartFile file, @PathVariable UUID dipendenteId) {
-
-        System.out.println(file.getOriginalFilename());
-        System.out.println(file.getSize());
-        System.out.println(file.getContentType());
-
-        this.dipendenteService.avatarUpload(file, dipendenteId);
     }
 }

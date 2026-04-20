@@ -1,11 +1,11 @@
 package cristiancicale.G1S3U5.controllers;
 
-import cristiancicale.G5S2U5.entities.Viaggio;
-import cristiancicale.G5S2U5.exceptions.ValidationException;
-import cristiancicale.G5S2U5.payloads.ViaggioDTO;
-import cristiancicale.G5S2U5.payloads.ViaggioPayload;
-import cristiancicale.G5S2U5.payloads.ViaggioRespDTO;
-import cristiancicale.G5S2U5.services.ViaggioService;
+import cristiancicale.G1S3U5.entities.Viaggio;
+import cristiancicale.G1S3U5.exceptions.ValidationException;
+import cristiancicale.G1S3U5.payloads.ViaggioDTO;
+import cristiancicale.G1S3U5.payloads.ViaggioPayload;
+import cristiancicale.G1S3U5.payloads.ViaggioRespDTO;
+import cristiancicale.G1S3U5.services.ViaggioService;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

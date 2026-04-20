@@ -1,13 +1,13 @@
 package cristiancicale.G1S3U5.services;
 
-import cristiancicale.G5S2U5.entities.Dipendente;
-import cristiancicale.G5S2U5.entities.Prenotazione;
-import cristiancicale.G5S2U5.entities.Viaggio;
-import cristiancicale.G5S2U5.exceptions.NotFoundException;
-import cristiancicale.G5S2U5.exceptions.ValidationException;
-import cristiancicale.G5S2U5.payloads.PrenotazioneDTO;
-import cristiancicale.G5S2U5.payloads.PrenotazionePayload;
-import cristiancicale.G5S2U5.repositories.PrenotazioneRepository;
+import cristiancicale.G1S3U5.entities.Dipendente;
+import cristiancicale.G1S3U5.entities.Prenotazione;
+import cristiancicale.G1S3U5.entities.Viaggio;
+import cristiancicale.G1S3U5.exceptions.NotFoundException;
+import cristiancicale.G1S3U5.exceptions.ValidationException;
+import cristiancicale.G1S3U5.payloads.PrenotazioneDTO;
+import cristiancicale.G1S3U5.payloads.PrenotazionePayload;
+import cristiancicale.G1S3U5.repositories.PrenotazioneRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
